@@ -1470,8 +1470,8 @@
       <div>
         <p class="modal-price" id="modal-price"></p>
         <div class="modal-actions">
-          <button class="btn-primary" onclick="showToast('Added to cart! 🛒')" style="flex:1; justify-content:center;">
-            Add to Cart
+          <button class="btn-primary" onclick="document.getElementById('modal-overlay').classList.remove('open'); document.getElementById('contact').scrollIntoView({behavior:'smooth'})" style="flex:1; justify-content:center;">
+            Inquire Now
           </button>
           <button class="btn-outline" onclick="closeModal()">Close</button>
         </div>
@@ -1504,9 +1504,6 @@
   <div class="nav-icons">
     <button class="nav-icon-btn" aria-label="Search" onclick="showToast('Search coming soon!')">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-    </button>
-    <button class="nav-icon-btn cart-badge" aria-label="Cart (0 items)" onclick="showToast('Your cart is empty')">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
     </button>
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -1898,24 +1895,6 @@
     <div>
       <p class="footer-brand-logo">Vaishnavi's <span>Creations</span></p>
       <p class="footer-brand-desc">Handcrafted resin art, sacred puja essentials &amp; charming crochet decor — made one piece at a time, with love.</p>
-      <div class="social-links" aria-label="Social media links">
-        <!-- Instagram -->
-        <a href="#" class="social-link" aria-label="Instagram">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </a>
-        <!-- Pinterest -->
-        <a href="#" class="social-link" aria-label="Pinterest">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12a4 4 0 1 0 8 0c0-2.4-1.9-5.1-4-7C9.9 6.9 8 9.6 8 12z"/><path d="M8 12c0 2.3.8 4.1 2 5.3-1.2-.3-2.4-1-3-2.3"/><path d="m9.4 16.8-.4 1.2"/></svg>
-        </a>
-        <!-- Etsy-style shop icon -->
-        <a href="#" class="social-link" aria-label="Etsy Shop">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-        </a>
-        <!-- Facebook -->
-        <a href="#" class="social-link" aria-label="Facebook">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </a>
-      </div>
     </div>
 
     <div class="footer-col">
@@ -1930,26 +1909,6 @@
       </ul>
     </div>
 
-    <div class="footer-col">
-      <h4>Policies</h4>
-      <ul>
-        <li><a href="#">Shipping Policy</a></li>
-        <li><a href="#">Returns &amp; Exchanges</a></li>
-        <li><a href="#">Care Instructions</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4>Stay in the Loop</h4>
-      <p style="font-size:.8rem;margin-bottom:.8rem;color:rgba(253,246,240,.55);">Get 10% off your first order! Subscribe for new collection drops and custom inspiration.</p>
-      <div class="newsletter-form">
-        <input type="email" class="newsletter-input" placeholder="Your email" aria-label="Email for newsletter" />
-        <button type="button" class="newsletter-btn" onclick="showToast('Thank you for subscribing! 🌸')">Join</button>
-      </div>
-      <p class="newsletter-note">No spam. Unsubscribe anytime.</p>
-    </div>
   </div>
 
   <div class="footer-bottom">
@@ -2072,10 +2031,6 @@ const faqs = [
     a: "After placing your order or submitting an inquiry, I'll reach out via email or Instagram DM. You can share your photo (high resolution, clear background preferred) directly with me. I'll handle the rest!"
   },
   {
-    q: "What is your shipping policy?",
-    a: "I ship across India via trusted couriers. Standard shipping takes 3–7 business days. All orders are carefully packed to prevent damage. Tracking details are shared once dispatched."
-  },
-  {
     q: "How do I care for my resin and crochet items?",
     a: "Resin items should be kept away from direct sunlight for extended periods and not submerged in water. Wipe clean with a soft, dry cloth. Crochet items can be gently spot-cleaned with cold water. Do not machine wash."
   },
@@ -2085,7 +2040,7 @@ const faqs = [
   },
   {
     q: "What materials do you use?",
-    a: "I use premium, non-toxic resin, 24k gold foil flakes, food-safe pigments, and high-quality gold-plated hardware for keychains. Puja thalis use medical-grade resin that is food-safe once fully cured. Crochet items use 100% cotton yarn."
+    a: "I use premium, non-toxic resin, metallic foil flakes, food-safe pigments, and high-quality plated hardware for keychains. Puja thalis use medical-grade resin that is food-safe once fully cured. Crochet items use 100% cotton yarn."
   }
 ];
 
@@ -2131,9 +2086,9 @@ function renderProducts(filter = 'all') {
             <span class="card-price">${p.price}</span>
             <span class="card-price-note">+ shipping</span>
           </div>
-          <button class="card-add-btn" onclick="event.stopPropagation();showToast('Added to cart! 🛒')" aria-label="Add ${p.name} to cart">
+          <button class="card-add-btn" onclick="event.stopPropagation();document.getElementById('contact').scrollIntoView({behavior:'smooth'})" aria-label="Inquire about ${p.name}">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
             </svg>
           </button>
         </div>
