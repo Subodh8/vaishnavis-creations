@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vaishnavi's Creations — Handmade Resin, Puja Thalis & Crochet</title>
-  <meta name="description" content="Discover unique handmade resin keychains, elegant puja thalis and charming crochet decor by Vaishnavi's Creations. Custom orders welcome." />
+  <title>Vaishnavi's Creations — Handmade Resin Keychains & Puja Thalis</title>
+  <meta name="description" content="Discover unique handmade resin keychains and elegant puja thalis by Vaishnavi's Creations. Custom orders welcome." />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1446,7 +1446,6 @@
   <a href="#shop" onclick="closeMobileNav()">Shop All</a>
   <a href="#shop" onclick="closeMobileNav()">Resin Keychains</a>
   <a href="#shop" onclick="closeMobileNav()">Puja Thalis</a>
-  <a href="#shop" onclick="closeMobileNav()">Crochet Decor</a>
   <a href="#custom" onclick="closeMobileNav()">Custom Orders</a>
   <a href="#about" onclick="closeMobileNav()">About</a>
   <a href="#contact" onclick="closeMobileNav()">Contact</a>
@@ -1495,7 +1494,6 @@
     <a href="#shop">Shop All</a>
     <a href="#shop" data-filter="keychain">Resin Keychains</a>
     <a href="#shop" data-filter="thali">Puja Thalis</a>
-    <a href="#shop" data-filter="crochet">Crochet Decor</a>
     <a href="#custom">Custom Orders</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
@@ -1527,7 +1525,7 @@
       <em>Tells Your</em> <span class="shimmer-text">Story.</span>
     </h1>
     <p class="hero-sub">
-      Discover handcrafted resin art, sacred puja essentials &amp; charming crochet decor — each piece uniquely made for you.
+      Discover handcrafted resin art and sacred puja essentials — each piece uniquely made for you.
     </p>
     <div class="hero-cta-group">
       <a href="#shop" class="btn-primary">
@@ -1580,7 +1578,6 @@
     <button class="filter-tab active" data-cat="all" onclick="filterProducts('all', this)">All</button>
     <button class="filter-tab" data-cat="keychain" onclick="filterProducts('keychain', this)">Resin Keychains</button>
     <button class="filter-tab" data-cat="thali" onclick="filterProducts('thali', this)">Puja Thalis</button>
-    <button class="filter-tab" data-cat="crochet" onclick="filterProducts('crochet', this)">Crochet Decor</button>
   </div>
 
   <div class="product-grid" id="product-grid" role="list"></div>
@@ -1649,7 +1646,6 @@
             <option value="keychain">Resin Keychain (Initial / Letter)</option>
             <option value="photo">Custom Photo / Memory Keychain</option>
             <option value="thali">Puja Thali (Resin)</option>
-            <option value="crochet">Crochet Decor</option>
             <option value="other">Something else / Not sure</option>
           </select>
         </div>
@@ -1699,9 +1695,9 @@
       <h2 class="section-title">Made by Hands.<br>Felt by Heart.</h2>
       <div class="gold-divider"></div>
       <p class="about-story">
-        Hi, I'm Vaishnavi — a self-taught resin and crochet artist with a deep love for colour, texture, and the magic that happens when you pour your heart into something handmade.
+        Hi, I'm Vaishnavi — a self-taught resin artist with a deep love for colour, texture, and the magic that happens when you pour your heart into something handmade.
         <br><br>
-        It began with a single mould, a bottle of resin, and a handful of gold flakes. Today, every piece I create — whether it's a sparkling letter keychain, an emerald Ganesha thali, or a delicate crochet planter — is still made one at a time, with the same intention and care.
+        It began with a single mould, a bottle of resin, and a handful of gold flakes. Today, every piece I create — whether it's a sparkling letter keychain or an elegant puja thali — is still made one at a time, with the same intention and care.
       </p>
 
       <p class="process-title">How Every Piece is Made</p>
@@ -1791,19 +1787,6 @@
 
     <article class="testimonial-card reveal">
       <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-      <span class="testimonial-product-tag">Crochet Decor</span>
-      <blockquote class="testimonial-quote">"The crochet hanging plant is the cutest thing in my living room. Super well-made, and the bow on top is an adorable touch. Ordering more!"</blockquote>
-      <div class="testimonial-author">
-        <div class="author-avatar" aria-hidden="true">P</div>
-        <div class="author-info">
-          <h5>Priya T.</h5>
-          <p>Delhi · Verified buyer</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="testimonial-card reveal">
-      <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
       <span class="testimonial-product-tag">Custom Order</span>
       <blockquote class="testimonial-quote">"Ordered 12 custom keychains as return gifts for my niece's birthday. All delivered on time, perfectly packed and every single one was flawless. 10/10!"</blockquote>
       <div class="testimonial-author">
@@ -1868,7 +1851,8 @@
       </div>
     </div>
     <div class="contact-form-card reveal">
-      <form onsubmit="handleContact(event)" novalidate>
+      <form action="https://formspree.io/f/xdaplzzk" method="POST">
+        <input type="hidden" name="_subject" value="New Inquiry — Vaishnavi's Creations" />
         <div class="form-group">
           <label for="cont-name">Your name <span aria-hidden="true">*</span></label>
           <input type="text" id="cont-name" name="name" placeholder="Full name" autocomplete="name" required />
@@ -1894,7 +1878,7 @@
   <div class="footer-grid">
     <div>
       <p class="footer-brand-logo">Vaishnavi's <span>Creations</span></p>
-      <p class="footer-brand-desc">Handcrafted resin art, sacred puja essentials &amp; charming crochet decor — made one piece at a time, with love.</p>
+      <p class="footer-brand-desc">Handcrafted resin art and sacred puja essentials — made one piece at a time, with love.</p>
     </div>
 
     <div class="footer-col">
@@ -1928,7 +1912,7 @@ const products = [
     name: "Black & Gold Flake Initial Keychain",
     category: "keychain",
     categoryLabel: "Resin Keychain",
-    price: "&#8377;280",
+    price: "&#8377;80",
     img: "https://res.cloudinary.com/dboajwq0u/image/upload/v1775134565/keychain-black-gold_xxgmak.png",
     desc: "A bold, glossy black resin initial keychain embedded with sparkling gold foil flakes. Every flake is hand-placed for a one-of-a-kind finish. Comes with a premium gold-plated split-ring and chain. Fully customisable — order your initial, your way.",
     tag: "Bestseller"
@@ -1938,7 +1922,7 @@ const products = [
     name: "Pink Marble Duo Initial Keychain Set",
     category: "keychain",
     categoryLabel: "Resin Keychain",
-    price: "&#8377;420",
+    price: "&#8377;80",
     img: "https://res.cloudinary.com/dboajwq0u/image/upload/v1775134565/keychain-pink-marble-duo_yfdtcc.jpg",
     desc: "A coordinated two-piece set featuring a large pink resin initial with swirling marble effect and embedded gold flakes, paired with a petite matching charm. Perfect for couples, siblings, or best friends. Fully customisable with your chosen initials.",
     tag: "Popular"
@@ -1948,7 +1932,7 @@ const products = [
     name: "Purple-to-Clear Ombre Shimmer Keychain",
     category: "keychain",
     categoryLabel: "Resin Keychain",
-    price: "&#8377;300",
+    price: "&#8377;60",
     img: "https://res.cloudinary.com/dboajwq0u/image/upload/v1775134566/keychain-purple-ombre_b5op7s.jpg",
     desc: "A vibrant gradient resin initial keychain. Deep sparkling purple fades into a crystal-clear top half, beautifully packed with fine gold shimmer flakes — like capturing a sunset in resin. A true statement piece, made to your chosen initial."
   },
@@ -1957,7 +1941,7 @@ const products = [
     name: "Emerald & Gold Dual-Tone Initial Keychain",
     category: "keychain",
     categoryLabel: "Resin Keychain",
-    price: "&#8377;280",
+    price: "&#8377;60",
     img: "https://res.cloudinary.com/dboajwq0u/image/upload/v1775134565/keychain-emerald-gold_iljomn.jpg",
     desc: "A bold two-tone initial keychain that balances nature and luxury. The upper half is a clear resin bed of dense gold glitter, the lower half is deep opaque emerald green with a subtle shimmer. Comes with gold-plated split-ring hardware. Available in any initial."
   },
@@ -1966,7 +1950,7 @@ const products = [
     name: "Pink & White Marble Gold Foil Initial Keychain",
     category: "keychain",
     categoryLabel: "Resin Keychain",
-    price: "&#8377;280",
+    price: "&#8377;100",
     img: "https://res.cloudinary.com/dboajwq0u/image/upload/v1775134565/keychain-pink-white-marble_hipyrk.jpg",
     desc: "An artisan marble-effect initial keychain in soft pink and cloudy white resin, with rich gold foil blooms scattered across the surface. The swirling, textured finish means no two pieces are ever identical. Customise with your initial."
   },
@@ -1975,7 +1959,7 @@ const products = [
     name: "Coastal Dream Seashell & Sea Glass Keychain",
     category: "keychain",
     categoryLabel: "Resin Keychain",
-    price: "&#8377;350",
+    price: "&#8377;60",
     img: "https://res.cloudinary.com/dboajwq0u/image/upload/v1775134565/keychain-coastal-seashell_etlntb.jpg",
     desc: "A one-of-a-kind beach-themed initial keychain in translucent ocean blue resin, with real embedded seashells, fine coastal sand, and sparkling glitter. Comes with a matching sea glass disc charm on a gold chain. Available in any initial."
   },
@@ -1984,7 +1968,7 @@ const products = [
     name: "Divine Emerald Ganesha Puja Thali",
     category: "thali",
     categoryLabel: "Puja Thali",
-    price: "&#8377;1,200",
+    price: "&#8377;180",
     img: "https://res.cloudinary.com/dboajwq0u/image/upload/v1775134566/puja-thali-emerald_nhocxq.jpg",
     desc: "A beautifully crafted circular puja thali in deep emerald green resin with a richly textured swirling surface. The centrepiece is a gold-embossed Ganesha icon, flanked by two delicate gold-dipped leaf charms. Set includes two polished gold-plated offering bowls.",
     tag: "Signature"
@@ -1994,26 +1978,16 @@ const products = [
     name: "Sacred Pink Om & Pearl Puja Thali",
     category: "thali",
     categoryLabel: "Puja Thali",
-    price: "&#8377;1,100",
+    price: "&#8377;180",
     img: "https://res.cloudinary.com/dboajwq0u/image/upload/v1775134566/puja-thali-pink-om_q5lulf.jpg",
     desc: "A serene and elegant puja thali in soft rose-pink swirling resin, anchored by a gold-embossed Om symbol. Two intricate gold-wire leaf charms frame the symbol, and the included gold-plated offering bowls are adorned with a row of delicate white pearls."
-  },
-  {
-    id: 9,
-    name: "Heart-Leaf Hanging Crochet Plant",
-    category: "crochet",
-    categoryLabel: "Crochet Decor",
-    price: "&#8377;450",
-    img: "https://res.cloudinary.com/dboajwq0u/image/upload/v1775134565/crochet-heart-leaf_fjgudg.jpg",
-    desc: "A handcrafted crochet wall hanging that brings nature indoors. A miniature white crochet pot overflows with cascading chains of heart-shaped green leaves, suspended from a white cotton cord finished with a satin bow. 100% cotton, lovingly stitched by hand.",
-    tag: "New"
   },
   {
     id: 10,
     name: "Custom Photo Memory Disc Keychain",
     category: "keychain",
     categoryLabel: "Resin Keychain",
-    price: "&#8377;380",
+    price: "&#8377;80",
     img: "https://res.cloudinary.com/dboajwq0u/image/upload/v1775134566/keychain-photo-disc_c4kcjm.jpg",
     desc: "Carry your most cherished memory wherever you go. A polished crystal-clear circular resin disc in sleek silver-tone hardware. Send us your favourite photo, a couple's portrait, a pet, logo or personalised text — preserved forever in this minimalist keepsake.",
     tag: "Custom"
@@ -2031,8 +2005,8 @@ const faqs = [
     a: "After placing your order or submitting an inquiry, I'll reach out via email or Instagram DM. You can share your photo (high resolution, clear background preferred) directly with me. I'll handle the rest!"
   },
   {
-    q: "How do I care for my resin and crochet items?",
-    a: "Resin items should be kept away from direct sunlight for extended periods and not submerged in water. Wipe clean with a soft, dry cloth. Crochet items can be gently spot-cleaned with cold water. Do not machine wash."
+    q: "How do I care for my resin items?",
+    a: "Resin items should be kept away from direct sunlight for extended periods and not submerged in water. Wipe clean with a soft, dry cloth. Puja thalis are food-safe once fully cured but should not be soaked in water."
   },
   {
     q: "Can I get a bulk/wedding order discount?",
@@ -2040,7 +2014,7 @@ const faqs = [
   },
   {
     q: "What materials do you use?",
-    a: "I use premium, non-toxic resin, metallic foil flakes, food-safe pigments, and high-quality plated hardware for keychains. Puja thalis use medical-grade resin that is food-safe once fully cured. Crochet items use 100% cotton yarn."
+    a: "I use premium, non-toxic resin, metallic foil flakes, food-safe pigments, and high-quality plated hardware for keychains. Puja thalis use medical-grade resin that is food-safe once fully cured."
   }
 ];
 
