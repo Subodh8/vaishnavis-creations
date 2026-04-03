@@ -1173,44 +1173,6 @@
     }
 
     /* ─────────────────────────────────────────
-       ⑧ CONTACT SECTION
-    ───────────────────────────────────────── */
-    #contact {
-      padding: 6rem 5vw;
-      background: var(--white);
-    }
-    .contact-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 4rem;
-      align-items: start;
-    }
-    .contact-info h2 { font-family: var(--font-display); font-size: 2.2rem; font-weight: 500; }
-    .contact-info p { margin-top: .8rem; font-size: .9rem; color: var(--text-mid); line-height: 1.7; }
-    .contact-details {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    .contact-detail {
-      display: flex;
-      align-items: center;
-      gap: .8rem;
-      font-size: .85rem;
-      color: var(--text-mid);
-    }
-    .contact-detail svg { width: 18px; height: 18px; color: var(--gold); flex-shrink: 0; }
-    .contact-form-card {
-      background: var(--bg);
-      border-radius: var(--radius-lg);
-      padding: 2rem 1.8rem;
-      border: 1px solid var(--border);
-    }
-
-    /* ─────────────────────────────────────────
        ⑨ FOOTER
     ───────────────────────────────────────── */
     footer {
@@ -1393,7 +1355,6 @@
       .custom-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .about-accent-card { display: none; }
-      .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
       .modal-img { display: none; }
       .modal-box { max-width: 420px; }
@@ -1448,7 +1409,6 @@
   <a href="#shop" onclick="closeMobileNav()">Puja Thalis</a>
   <a href="#custom" onclick="closeMobileNav()">Custom Orders</a>
   <a href="#about" onclick="closeMobileNav()">About</a>
-  <a href="#contact" onclick="closeMobileNav()">Contact</a>
 </nav>
 
 <!-- ── QUICK LOOK MODAL ── -->
@@ -1469,7 +1429,7 @@
       <div>
         <p class="modal-price" id="modal-price"></p>
         <div class="modal-actions">
-          <button class="btn-primary" onclick="document.getElementById('modal-overlay').classList.remove('open'); document.getElementById('contact').scrollIntoView({behavior:'smooth'})" style="flex:1; justify-content:center;">
+          <button class="btn-primary" onclick="document.getElementById('modal-overlay').classList.remove('open'); document.getElementById('custom').scrollIntoView({behavior:'smooth'})" style="flex:1; justify-content:center;">
             Inquire Now
           </button>
           <button class="btn-outline" onclick="closeModal()">Close</button>
@@ -1496,7 +1456,6 @@
     <a href="#shop" data-filter="thali">Puja Thalis</a>
     <a href="#custom">Custom Orders</a>
     <a href="#about">About</a>
-    <a href="#contact">Contact</a>
   </nav>
 
   <div class="nav-icons">
@@ -1629,7 +1588,8 @@
     <!-- Custom order form -->
     <div class="custom-form-card reveal">
       <h3 class="custom-form-title">Start Your Custom Inquiry</h3>
-      <form onsubmit="handleCustomOrder(event)" novalidate>
+      <form action="https://formspree.io/f/xdaplzzk" method="POST" id="custom-form" novalidate>
+        <input type="hidden" name="_subject" value="New Custom Inquiry — Vaishnavi's Creations" />
         <div class="form-row">
           <div class="form-group">
             <label for="c-name">Your name <span aria-hidden="true">*</span></label>
@@ -1828,50 +1788,7 @@
   <div class="faq-inner" id="faq-list" aria-label="FAQ accordion"></div>
 </section>
 
-<!-- ════════════════════════════════════════
-     ⑧ CONTACT
-════════════════════════════════════════ -->
-<section id="contact" aria-label="Contact us">
-  <div class="contact-inner">
-    <div class="contact-info reveal">
-      <span class="section-label">Get in Touch</span>
-      <h2 class="section-title">Let's Create Something Beautiful</h2>
-      <p>Have a question about an order, a custom idea, or just want to say hello? I'd love to hear from you.</p>
-      <div class="contact-details">
-        <div class="contact-detail">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span>vaishnavicreations@email.com</span>
-        </div>
-        <div class="contact-detail">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span>DM on Instagram for fastest response</span>
-        </div>
-        <div class="contact-detail">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span>Custom orders: 5–10 business days</span>
-        </div>
-      </div>
-    </div>
-    <div class="contact-form-card reveal">
-      <form action="https://formspree.io/f/xdaplzzk" method="POST">
-        <input type="hidden" name="_subject" value="New Inquiry — Vaishnavi's Creations" />
-        <div class="form-group">
-          <label for="cont-name">Your name <span aria-hidden="true">*</span></label>
-          <input type="text" id="cont-name" name="name" placeholder="Full name" autocomplete="name" required />
-        </div>
-        <div class="form-group">
-          <label for="cont-email">Email address <span aria-hidden="true">*</span></label>
-          <input type="email" id="cont-email" name="email" placeholder="you@email.com" autocomplete="email" required />
-        </div>
-        <div class="form-group">
-          <label for="cont-msg">Message <span aria-hidden="true">*</span></label>
-          <textarea id="cont-msg" name="message" style="height:130px" placeholder="What's on your mind?" required></textarea>
-        </div>
-        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Send Message</button>
-      </form>
-    </div>
-  </div>
-</section>
+
 
 <!-- ════════════════════════════════════════
      ⑨ FOOTER
@@ -1891,8 +1808,7 @@
         <li><a href="#custom">Custom Orders</a></li>
         <li><a href="#about">About the Artist</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+            </ul>
     </div>
 
   </div>
@@ -2072,7 +1988,7 @@ function renderProducts(filter = 'all') {
             <span class="card-price">${p.price}</span>
             <span class="card-price-note">+ shipping</span>
           </div>
-          <button class="card-add-btn" onclick="event.stopPropagation();document.getElementById('contact').scrollIntoView({behavior:'smooth'})" aria-label="Inquire about ${p.name}">
+          <button class="card-add-btn" onclick="event.stopPropagation();document.getElementById('custom').scrollIntoView({behavior:'smooth'})" aria-label="Inquire about ${p.name}">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
             </svg>
@@ -2170,12 +2086,6 @@ function handleCustomOrder(e) {
   showToast('Your inquiry has been sent! I\'ll be in touch soon 🌸');
   e.target.reset();
 }
-function handleContact(e) {
-  e.preventDefault();
-  showToast('Message sent! Thank you for reaching out 💛');
-  e.target.reset();
-}
-
 /* ── Scroll Reveal ── */
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
