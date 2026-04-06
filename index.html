@@ -1650,9 +1650,7 @@
     <!-- Custom order form -->
     <div class="custom-form-card reveal">
       <h3 class="custom-form-title">Start Your Custom Inquiry</h3>
-      <form action="https://formspree.io/f/xdaplzzk" method="POST" id="custom-form">
-        <input type="hidden" name="_subject" value="New Custom Inquiry — Vaishnavi's Creations" />
-        <input type="hidden" name="_next" value="https://vaishnavis-creations.vercel.app/?sent=1" />
+      <form id="custom-form">
         <div class="form-row">
           <div class="form-group">
             <label for="c-name">Your name <span aria-hidden="true">*</span></label>
@@ -2138,6 +2136,56 @@ function showToast(msg) {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => t.classList.remove('show'), 3500);
 }
+
+/* ── Custom Order Form → Google Apps Script ── */
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby1Mlgm5qaQjLw9mycgGYuLD3UQZDkKXPiZ2vPiVMQOLOeLeRk6-XXGeDK9kgnYVW6Y/exec';
+
+document.getElementById('custom-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn  = form.querySelector('[type="submit"]');
+
+  // Basic validation
+  const name    = form.querySelector('[name="name"]').value.trim();
+  const email   = form.querySelector('[name="email"]').value.trim();
+  const product = form.querySelector('[name="product_type"]').value;
+  const details = form.querySelector('[name="details"]').value.trim();
+  if (!name || !email || !product || !details) {
+    showToast('Please fill in all required fields.');
+    return;
+  }
+
+  const payload = {
+    name:         name,
+    email:        email,
+    product_type: product,
+    details:      details,
+    budget:       form.querySelector('[name="budget"]').value || 'Not specified'
+  };
+
+  // Loading state
+  const originalHTML = btn.innerHTML;
+  btn.disabled  = true;
+  btn.innerHTML = 'Sending&hellip;';
+
+  fetch(APPS_SCRIPT_URL, {
+    method:  'POST',
+    mode:    'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body:    JSON.stringify(payload)
+  })
+  .then(function() {
+    showToast('Your inquiry has been sent! Vaishnavi will be in touch soon 🌸');
+    form.reset();
+  })
+  .catch(function() {
+    showToast('Something went wrong — please try again or reach out directly.');
+  })
+  .finally(function() {
+    btn.disabled  = false;
+    btn.innerHTML = originalHTML;
+  });
+});
 
 /* ── Scroll Reveal ── */
 const revealObserver = new IntersectionObserver((entries) => {
