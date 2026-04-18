@@ -1662,6 +1662,10 @@
           </div>
         </div>
         <div class="form-group">
+          <label for="c-phone">Phone number <span aria-hidden="true">*</span></label>
+          <input type="tel" id="c-phone" name="phone" placeholder="e.g. 98765 43210" autocomplete="tel" required />
+        </div>
+        <div class="form-group">
           <label for="c-type">Product type <span aria-hidden="true">*</span></label>
           <select id="c-type" name="product_type" required>
             <option value="" disabled selected>Select a product category</option>
@@ -2000,7 +2004,7 @@ const faqs = [
   },
   {
     q: "How do I submit my photo for the custom photo keychain?",
-    a: "After placing your order or submitting an inquiry, I'll reach out via email or Instagram DM. You can share your photo (high resolution, clear background preferred) directly with me. I'll handle the rest!"
+    a: "After placing your order or submitting an inquiry, I'll reach out via email or WhatsApp DM. You can share your photo (high resolution, clear background preferred) directly with me. I'll handle the rest!"
   },
   {
     q: "How do I care for my resin items?",
@@ -2161,9 +2165,10 @@ document.getElementById('custom-form').addEventListener('submit', function(e) {
   // Basic validation
   const name    = form.querySelector('[name="name"]').value.trim();
   const email   = form.querySelector('[name="email"]').value.trim();
+  const phone   = form.querySelector('[name="phone"]').value.trim();
   const product = form.querySelector('[name="product_type"]').value;
   const details = form.querySelector('[name="details"]').value.trim();
-  if (!name || !email || !product || !details) {
+  if (!name || !email || !phone || !product || !details) {
     showToast('Please fill in all required fields.');
     return;
   }
@@ -2171,6 +2176,7 @@ document.getElementById('custom-form').addEventListener('submit', function(e) {
   const payload = {
     name:         name,
     email:        email,
+    phone:        phone,
     product_type: product,
     details:      details,
     budget:       form.querySelector('[name="budget"]').value || 'Not specified'
